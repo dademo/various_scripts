@@ -1,7 +1,7 @@
 #!/bin/bash
 
-nOneko=1000
-randRevColor=true
+nOneko=100
+randRevColor=false
 minSpeed=10
 maxSpeed=25
 
@@ -17,7 +17,7 @@ for (( i=0; i < ${nOneko}; i++ )); do
 
 opts=""
 
-	if [ $(rand 1) == 0 ]; then
+	if [ $(rand 2) == 0 -a ${randRevColor} ]; then
 		opts="${opts} -rv"
 	fi
 
